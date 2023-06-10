@@ -9,6 +9,7 @@ This will also allow you to automaticly restock a chosen amount of Flashpowder i
 /bp dpX Y 	Buy Components for Y Level X Deadly Poison
 /bp mpX Y 	Buy Components for Y Level X Mind-numbing Poison
 /bp ipX Y 	Buy Components for Y Level X Instant Poison
+/bp ap1 Y  Buy Components for Y Agitating Poison
 /bp fp Y Buy Y Flash Powder
 e.g. "/bp wp3 10" will buy all components needed for 10 lots of 
 	level 3 Wound Poison.

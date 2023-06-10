@@ -16,7 +16,7 @@ function BuyPoisonsFrame_Update()
 	SetPortraitTexture(MerchantFramePortrait, "NPC");
 --	bp_print("starting")
 
-	local numBuyPoisonsItems = 21;
+	local numBuyPoisonsItems = 22;
 	local name, texture, price, quantity, numAvailable, isUsable;
 	for i=1, MERCHANT_ITEMS_PER_PAGE, 1 do
 		local index = (((BuyPoisonsFrame.page - 1) * MERCHANT_ITEMS_PER_PAGE) + i);

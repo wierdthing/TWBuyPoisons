@@ -11,6 +11,7 @@ function BuyPoisons_RestockPoisons()
 	BuyPoisonsRestock[BUYPOISONS_VIAL_EMPTY] = 0;
 	BuyPoisonsRestock[BUYPOISONS_VIAL_CRYSTAL] = 0;
 	BuyPoisonsRestock[BUYPOISONS_VIAL_LEADED] = 0;
+	BuyPoisonsRestock[BUYPOISONS_COMPONENT_MAIDENS_ANGUISH] = 0;
 
 	BuyPoisonsComponents = {};
 	BuyPoisonsComponents[1]=BUYPOISONS_VIAL_EMPTY;
@@ -23,9 +24,10 @@ function BuyPoisons_RestockPoisons()
 	BuyPoisonsComponents[8]=BUYPOISONS_COMPONENT_ESSENCE_OF_AGONY;
 	BuyPoisonsComponents[9]=BUYPOISONS_COMPONENT_ESSENCE_OF_PAIN;
 	BuyPoisonsComponents[10]=BUYPOISONS_COMPONENT_LETHARGY_ROOT;
+	BuyPoisonsComponents[11]=BUYPOISONS_COMPONENT_MAIDENS_ANGUISH;
 
 
-	for i = 1, 21 do
+	for i = 1, 22 do
 			local VialType = BuyPoisonsItemInfo[i]["Vial_Type"];
 			local RestockQuantity = BuyPoisonsData[Server][User][i];
 			if (RestockQuantity > 0) then
@@ -37,7 +39,7 @@ function BuyPoisons_RestockPoisons()
 			end
 	end
 	
-	for i = 1, 10 do
+	for i = 1, 11 do
 		BuyPoisons_RestockItem( BuyPoisonsComponents[i] , BuyPoisonsRestock[(BuyPoisonsComponents[i])]);
 	end
 	

@@ -81,7 +81,7 @@ function BuyPoisons_command(msg)
 	end
 	if (GetMerchantNumItems() > 1) then
 		if poisontype then
-			for i = 1 , 21, 1 do
+			for i = 1 , 22, 1 do
 				if poisontype==BuyPoisonsItemInfo[i]["shortkey"] then
 					BuyPoisons_BuyQuantity(i , poisonamount);
 				end
@@ -189,7 +189,7 @@ function BuyPoisons_RestockItem(item, BuyPoisons_RestockQuantity)
 		DEFAULT_CHAT_FRAME:AddMessage("Vendor Sells:"..item.."["..item_index.."]",1,1,1);
 		local BuyPoisons_ItemsOnHand = BuyPoisons_CountMy(item);
 		DEFAULT_CHAT_FRAME:AddMessage("You Currently Have "..BuyPoisons_ItemsOnHand.." "..item,1,1,1);
-		for k = 1, 21 do
+		for k = 1, 22 do
 			if (BuyPoisons_RestockQuantity - BuyPoisons_ItemsOnHand > 20) then
 				Buy_Item(item, 20);
 				BuyPoisons_ItemsOnHand = BuyPoisons_ItemsOnHand + 20; 
@@ -197,7 +197,7 @@ function BuyPoisons_RestockItem(item, BuyPoisons_RestockQuantity)
 				Buy_Item(item, (BuyPoisons_RestockQuantity - BuyPoisons_ItemsOnHand) );
 				BuyPoisons_ItemsOnHand = BuyPoisons_ItemsOnHand + (BuyPoisons_RestockQuantity - BuyPoisons_ItemsOnHand);
 			else
-				k = 21;
+				k = 22;
 			end
 		end
 		
@@ -253,8 +253,7 @@ function BuyPoisons_GetPrice(i, BuyPoisons_PurchaseQuantity)
 		name, texture, price, quantity, numAvailable, isUsable = GetMerchantItemInfo(Index_merchant(BuyPoisonsItemInfo[i]["Components"][2]["Item"] ));
 		BuyPoisons_Item_price = BuyPoisons_Item_price + (price * BuyPoisonsItemInfo[i]["Components"][2]["Quantity"]*BuyPoisons_PurchaseQuantity);
 	end
-	
-	if ( i < 21 ) then
+	if ( i < 22 ) then
 		name, texture, price, quantity, numAvailable, isUsable = GetMerchantItemInfo(Index_merchant(BuyPoisonsItemInfo[i]["Vial_Type"] ));
 		BuyPoisons_Item_price  = BuyPoisons_Item_price + (price * ((BuyPoisons_PurchaseQuantity/ 5 )));
 	end
