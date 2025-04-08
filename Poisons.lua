@@ -1,8 +1,6 @@
 function BUYPOISONS_LOADPOISONS()
-
-BuyPoisonsItemInfo={};
-
-for i=1, 22, 1 do
+BuyPoisonsItemInfo={};	
+for i=1, 23, 1 do
 	BuyPoisonsItemInfo[i]={};
 	BuyPoisonsItemInfo[i]["Components"]={};
 	BuyPoisonsItemInfo[i]["Components"][1]={};
@@ -68,12 +66,12 @@ BuyPoisonsItemInfo[20]["Components"][1]["Quantity"]= 1;
 BuyPoisonsItemInfo[20]["Vial_Type"]=BUYPOISONS_VIAL_EMPTY;
 
 --WP4
-BuyPoisonsItemInfo[3]["texture"] = "Interface\\Icons\\INV_Misc_Herb_16";
-BuyPoisonsItemInfo[3]["Components"][1]["Item"]= BUYPOISONS_COMPONENT_ESSENCE_OF_AGONY;
-BuyPoisonsItemInfo[3]["Components"][1]["Quantity"]= 2;
-BuyPoisonsItemInfo[3]["Components"][2]["Item"]= BUYPOISONS_COMPONENT_DEATHWEED;
-BuyPoisonsItemInfo[3]["Components"][2]["Quantity"]= 2;
-BuyPoisonsItemInfo[3]["Vial_Type"]=BUYPOISONS_VIAL_CRYSTAL;
+BuyPoisonsItemInfo[23]["texture"] = "Interface\\Icons\\INV_Misc_Herb_16";
+BuyPoisonsItemInfo[23]["Components"][1]["Item"]= BUYPOISONS_COMPONENT_ESSENCE_OF_AGONY;
+BuyPoisonsItemInfo[23]["Components"][1]["Quantity"]= 2;
+BuyPoisonsItemInfo[23]["Components"][2]["Item"]= BUYPOISONS_COMPONENT_DEATHWEED;
+BuyPoisonsItemInfo[23]["Components"][2]["Quantity"]= 2;
+BuyPoisonsItemInfo[23]["Vial_Type"]=BUYPOISONS_VIAL_CRYSTAL;
 --WP3
 BuyPoisonsItemInfo[9]["texture"] = "Interface\\Icons\\INV_Misc_Herb_16";
 BuyPoisonsItemInfo[9]["Components"][1]["Item"]= BUYPOISONS_COMPONENT_ESSENCE_OF_AGONY;
@@ -150,5 +148,14 @@ BuyPoisonsItemInfo[6]["texture"] = "Interface\\Icons\\Spell_Nature_NullifyPoison
 BuyPoisonsItemInfo[6]["Components"][1]["Item"]= BUYPOISONS_COMPONENT_MAIDENS_ANGUISH;
 BuyPoisonsItemInfo[6]["Components"][1]["Quantity"]= 2;
 BuyPoisonsItemInfo[6]["Vial_Type"]=BUYPOISONS_VIAL_LEADED;
+
+--COR2
+BuyPoisonsItemInfo[3]["texture"] = "Interface\\Icons\\Spell_Nature_CorrosiveBreath";
+BuyPoisonsItemInfo[3]["Components"][1]["Item"]= BUYPOISONS_COMPONENT_DUST_OF_DETERIORATION;
+BuyPoisonsItemInfo[3]["Components"][1]["Quantity"]= 3;
+BuyPoisonsItemInfo[3]["Components"][2]["Item"]= BUYPOISONS_COMPONENT_DEATHWEED;
+BuyPoisonsItemInfo[3]["Components"][2]["Quantity"]=3;
+BuyPoisonsItemInfo[3]["Vial_Type"]=BUYPOISONS_VIAL_CRYSTAL;
+
 
 end
