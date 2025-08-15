@@ -119,7 +119,7 @@ BuyPoisonsItemInfo[18]["Components"][1]["Quantity"]= 1;
 BuyPoisonsItemInfo[18]["Vial_Type"]=BUYPOISONS_VIAL_LEADED;
 
 --DISSOL2 (New Dissolvent Poison II) - Position 4
-BuyPoisonsItemInfo[4]["texture"] = "Interface\\Icons\\Spell_Nature_CorrosiveBreath";
+BuyPoisonsItemInfo[4]["texture"] = "Interface\\Icons\\Spell_Nature_SlowPoison";
 BuyPoisonsItemInfo[4]["Components"][1]["Item"]= BUYPOISONS_COMPONENT_DUST_OF_DETERIORATION;
 BuyPoisonsItemInfo[4]["Components"][1]["Quantity"]= 3;
 BuyPoisonsItemInfo[4]["Components"][2]["Item"]= BUYPOISONS_COMPONENT_MAIDENS_ANGUISH;
